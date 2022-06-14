@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Gamil</title>
+</head>
+<body>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        body{
+            font-size: large;
+        }
+        .warpper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 70vh;
+        }
+        form{
+            border: solid rgb(220, 220, 220);
+            border: radius 5px; 
+            padding: 10px 20px;
+        }
+        h3{
+            text-align: center;
+            font-size: 24px;
+            font-weight: 500;
+        }
+        .form_group{
+            margin-bottom: 15px;
+            position: relative;
+        }
+        input{
+            height: 40px;
+            width: 300px;
+            outline: none;
+            border: 1px solid rgb(220, 220, 220);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: inherit;
+            transition: all 0.3s ease-in-out;
+        }
+        label{
+            position: absolute;
+            padding: 0px 5px;
+            left: 10px;
+            pointer-events: none;
+            top: 25%;
+            transform: translateY(-50);
+            transition: all 0.3s ease-in-out;
+            background-color: rgb(255, 255, 255);
+        }
+        .form_group input:focus {
+            border: 2px solid  rgb(69, 69, 255);
+        }
+        .form_group input:focus+label,.form_group input:valid +label{
+            top: -10px;
+            font-size: 16px;
+            font-weight: 500;
+            color: rgb(69, 69, 255);
+        }
+        input#btn_login{
+            background-color: rgb(127, 223, 255);
+            color: white;
+        }
+        input#btn_login:hover{
+            opacity: 0.85;
+        }
+    </style>
+    <div class="warpper">
+        <form action="">
+            <h3>Đăng Nhập</h3>
+            <div class="form_group">
+                <input type="text" name="Email" required>
+                <label for="">Email</label>
+            </div>
+            <div class="form_group">
+                <input type="password" name="password"required>
+                <label for="">Password</label>
+            </div>
+            <input type="submit" value="Đăng Nhập" id="btn_login">
+        </form>
+    </div>
+</body>
+</html>
